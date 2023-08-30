@@ -274,3 +274,43 @@
 <script type="text/javascript" src="./js/canvas.js"></script>
 
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 样式可以根据需要进行修改 */
+        #audioPlayer {
+            width: 300px;
+            margin: 20px;
+        }
+        #playButton, #pauseButton {
+            width: 100px;
+            padding: 10px;
+            background-color: #2798da;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="audioPlayer">
+        <audio id="audio" src="http://music.163.com/song/media/outer/url?id=484056997.mp3" preload="auto"></audio>
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
+    </div>
+
+    <script>
+        var audio = document.getElementById('audio');
+        var playButton = document.getElementById('playButton');
+        var pauseButton = document.getElementById('pauseButton');
+
+        playButton.addEventListener('click', function() {
+            audio.play();
+        });
+
+        pauseButton.addEventListener('click', function() {
+            audio.pause();
+        });
+    </script>
+</body>
+</html>
